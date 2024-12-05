@@ -1,0 +1,29 @@
+/* searched-products.css */
+.searched-product {
+    width: 25%;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .searched-product .contents h6 {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .searched-product .price {
+    color: #db4444;
+  }
+  
+  .searched-product .add-to-cart {
+    background-color: #000;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .searched-product .add-to-cart:hover {
+    background-color: #000;
+  }
+
+

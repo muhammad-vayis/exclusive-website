@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Exclusive</title>
+        <title>Exclusive | Search and Shop Your Favorite Items</title>
+        <link rel="icon" href="assets/images/icons8-online-shopping.svg" type="image/x-icon" />
         <link rel="stylesheet" href="Css/style.css" />
+        <script src="index.js" defer></script>
+        <link rel="stylesheet" href="Css/search-results.css" />
     </head>
     <body>
         <div class="top-bar">
@@ -29,7 +32,9 @@
         <header>
             <section class="wrapper">
                 <section class="connect">
-                    <div class="logo">Exclusive</div>
+                    <div class="logo"><a href="index.html"><img src="assets/images/Logo.png" alt="logo"></a></div>
+
+                    <!-- Desktop Navigation -->
                     <nav>
                         <ul>
                             <li><a href="#">Home</a></li>
@@ -38,13 +43,19 @@
                             <li><a href="#">Sign Up</a></li>
                         </ul>
                     </nav>
+
+                    <!-- Header Icons -->
                     <div class="header-icons">
                         <div class="ooo">
-                            <input type="text" placeholder="What are you looking for?" />
+                            <input type="text" id="search-input" placeholder="What are you looking for?" />
+                            <button id="clear-btn" class="clear-btn" style="display: none">&times;</button>
                             <div class="icon-img">
-                                <img src="assets/images/search.svg" alt="Search" />
+                                <button id="search-button" class="search-icon">
+                                    <img src="assets/images/search.svg" alt="Search" />
+                                </button>
                             </div>
                         </div>
+
                         <div class="like">
                             <a href="#" class="icon">
                                 <i class="heart"><img src="assets/images/Wishlist.svg" alt="wish-list" /></i>
@@ -55,6 +66,21 @@
                                 <i class="cart"><img src="assets/images/Cart.svg" alt="cart" /></i>
                             </a>
                         </div>
+                    </div>
+
+                    <!-- Mobile Menu Dropdown -->
+                    <div class="mobile-menu-dropdown">
+                        <a href="#">Home</a>
+                        <a href="#">Contact</a>
+                        <a href="#">About</a>
+                        <a href="#">Sign Up</a>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu">
+                        <img src="assets/images/menu.svg" alt="Menu" class="hamburger-icon" />
+                    </div>
+                    <div class="mobile-menu-close">
+                        <img src="assets/images/circle-x.svg" alt="Close" class="close-icon" style="display: none" />
                     </div>
                 </section>
             </section>
@@ -84,6 +110,17 @@
                 </div>
             </div>
         </section>
+
+        <!--products shown and go back-->
+        <section class="wrapper">
+            <div class="clicks" style="display: none">
+                <a class="grey-color" href="index.html">Home</a>
+                /
+                <a class="default" href="view-products.html">Products</a>
+            </div>
+        </section>
+
+        <!--products shown and go back-->
 
         <section class="wrapper">
             <section class="categories-section">
@@ -135,269 +172,12 @@
         </section>
 
         <section class="wrapper">
-            <div class="seperate">
-                <div class="product-box">
-                    <div class="product-container">
-                        <div class="imageo">
-                            <div class="bgcontainer">
-                                <img src="assets/images/71RdoeXxtrL 1.png" alt="product" />
-                            </div>
-                        </div>
-
-                        <div class="imagecontainer">
-                            <div class="iconimg wishlist">
-                                <img src="./assets/images/wishlist.svg" alt="wishlist icon" />
-                            </div>
-                            <div class="iconimg quick-view">
-                                <img src="./assets/images/Quick View.svg" alt="quick view icon" />
-                            </div>
-                        </div>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="contents">
-                        <h6>Breed Dry Dog Food</h6>
-                        <div class="line">
-                            <span class="price">$100</span>
-                            <div class="rating">
-                                <img src="./assets/images/Three Star.svg" alt="star" />
-                                <span>(35)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-box">
-                    <div class="product-container">
-                        <div class="imageo">
-                            <div class="bgcontainer">
-                                <img src="assets/images/eos-250d-03-500x500 1.png" alt="product" />
-                            </div>
-                        </div>
-
-                        <div class="imagecontainer">
-                            <div class="iconimg wishlist">
-                                <img src="./assets/images/wishlist.svg" alt="wishlist icon" />
-                            </div>
-                            <div class="iconimg quick-view">
-                                <img src="./assets/images/Quick View.svg" alt="quick view icon" />
-                            </div>
-                        </div>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="contents">
-                        <h6>CANON EOS DSLR Camera</h6>
-                        <div class="line">
-                            <span class="price">$360</span>
-                            <div class="rating">
-                                <img src="./assets/images/Four Star.svg" alt="star" />
-                                <span>(95)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-box">
-                    <div class="product-container">
-                        <div class="imageo">
-                            <div class="bgcontainer">
-                                <img src="assets/images/lap.png" alt="product" />
-                            </div>
-                        </div>
-
-                        <div class="imagecontainer">
-                            <div class="iconimg wishlist">
-                                <img src="./assets/images/wishlist.svg" alt="wishlist icon" />
-                            </div>
-                            <div class="iconimg quick-view">
-                                <img src="./assets/images/Quick View.svg" alt="quick view icon" />
-                            </div>
-                        </div>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="contents">
-                        <h6>ASUS FHD Gaming Laptop</h6>
-                        <div class="line">
-                            <span class="price">$100</span>
-                            <div class="rating">
-                                <img src="./assets/images/Three Star.svg" alt="star" />
-                                <span>(35)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-box">
-                    <div class="product-container">
-                        <div class="imageo">
-                            <div class="bgcontainer">
-                                <img src="assets/images/cream.png" alt="product" />
-                            </div>
-                        </div>
-
-                        <div class="imagecontainer">
-                            <div class="iconimg wishlist">
-                                <img src="./assets/images/wishlist.svg" alt="wishlist icon" />
-                            </div>
-                            <div class="iconimg quick-view">
-                                <img src="./assets/images/Quick View.svg" alt="quick view icon" />
-                            </div>
-                        </div>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="contents">
-                        <h6>Curology Product Set</h6>
-                        <div class="line">
-                            <span class="price">$100</span>
-                            <div class="rating">
-                                <img src="./assets/images/Three Star.svg" alt="star" />
-                                <span>(35)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-box">
-                    <div class="product-container">
-                        <span class="new-badge">NEW</span>
-                        <div class="imageo">
-                            <div class="bgcontainer">
-                                <img
-                                    src="assets/images/New-Mercedes-Benz-Gtr-Licensed-Ride-on-Car-Kids-Electric-Toy-Car 1.png"
-                                    alt="product"
-                                />
-                            </div>
-                        </div>
-                        <div class="imagecontainer">
-                            <div class="iconimg wishlist">
-                                <img src="./assets/images/wishlist.svg" alt="wishlist icon" />
-                            </div>
-                            <div class="iconimg quick-view">
-                                <img src="./assets/images/Quick View.svg" alt="quick view icon" />
-                            </div>
-                        </div>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="contents">
-                        <h6>Kids Electric Car</h6>
-                        <div class="line">
-                            <span class="price">$100</span>
-                            <div class="rating">
-                                <img src="./assets/images/Three Star.svg" alt="star" />
-                                <span>(35)</span>
-                            </div>
-                        </div>
-                        <div class="color-options">
-                            <div class="color-circle color-red"></div>
-                            <div class="color-circle color-fade-red"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-box">
-                    <div class="product-container">
-                        <div class="imageo">
-                            <div class="bgcontainer">
-                                <img src="assets/images/Copa_Sense 1.png" alt="product" />
-                            </div>
-                        </div>
-
-                        <div class="imagecontainer">
-                            <div class="iconimg wishlist">
-                                <img src="./assets/images/wishlist.svg" alt="wishlist icon" />
-                            </div>
-                            <div class="iconimg quick-view">
-                                <img src="./assets/images/Quick View.svg" alt="quick view icon" />
-                            </div>
-                        </div>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="contents">
-                        <h6>Jr. Zoom Soccer Cleats</h6>
-                        <div class="line">
-                            <span class="price">$100</span>
-                            <div class="rating">
-                                <img src="./assets/images/Three Star.svg" alt="star" />
-                                <span>(35)</span>
-                            </div>
-                        </div>
-                        <div class="color-options">
-                            <div class="color-circle color-yellow"></div>
-                            <div class="color-circle color-fade-red"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-box">
-                    <div class="product-container">
-                        <span class="new-badge">NEW</span>
-
-                        <div class="imageo">
-                            <div class="bgcontainer">
-                                <img src="assets/images/GP11_PRD3 1.png" alt="product" />
-                            </div>
-                        </div>
-
-                        <div class="imagecontainer">
-                            <div class="iconimg wishlist">
-                                <img src="./assets/images/wishlist.svg" alt="wishlist icon" />
-                            </div>
-                            <div class="iconimg quick-view">
-                                <img src="./assets/images/Quick View.svg" alt="quick view icon" />
-                            </div>
-                        </div>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="contents">
-                        <h6>GP11 Shooter USB Gamepad</h6>
-                        <div class="line">
-                            <span class="price">$100</span>
-                            <div class="rating">
-                                <img src="./assets/images/Three Star.svg" alt="star" />
-                                <span>(35)</span>
-                            </div>
-                        </div>
-                        <div class="color-options">
-                            <div class="color-circle color-black"></div>
-                            <div class="color-circle color-fade-red"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-box">
-                    <div class="product-container">
-                        <div class="imageo">
-                            <div class="bgcontainer">
-                                <img src="assets/images/jacket.png" alt="product" />
-                            </div>
-                        </div>
-
-                        <div class="imagecontainer">
-                            <div class="iconimg wishlist">
-                                <img src="./assets/images/wishlist.svg" alt="wishlist icon" />
-                            </div>
-                            <div class="iconimg quick-view">
-                                <img src="./assets/images/Quick View.svg" alt="quick view icon" />
-                            </div>
-                        </div>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="contents">
-                        <h6>Quilted Satin Jacket</h6>
-                        <div class="line">
-                            <span class="price">$100</span>
-                            <div class="rating">
-                                <img src="./assets/images/Three Star.svg" alt="star" />
-                                <span>(35)</span>
-                            </div>
-                        </div>
-                        <div class="color-options">
-                            <div class="color-circle color-green"></div>
-                            <div class="color-circle color-fade-red"></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="seperate" id="product-grid">
+                <!-- Products will be dynamically injected here -->
             </div>
             <hr />
+
+            <div id="searched-products" class="searched-products"></div>
         </section>
 
         <div class="btn">
@@ -448,7 +228,7 @@
                     <div class="subscribe-form">
                         <input type="email" placeholder="Enter your email" />
                         <button>
-                            <i class="fas fa-paper-plane"><img src="assets/images/Vector.svg" alt="" /></i>
+                            <img src="assets/images/Vector.svg" alt="Vector-img" />
                         </button>
                     </div>
                 </div>
@@ -495,10 +275,10 @@
                     </div>
 
                     <div class="social-icons">
-                        <i class="fab fa-facebook-f"><img src="assets/images/facebook.svg" alt="image" /></i>
-                        <i class="fab fa-twitter"><img src="assets/images/twitter.svg" alt="image" /></i>
-                        <i class="fab fa-instagram"><img src="assets/images/icon-instagram.svg" alt="image" /></i>
-                        <i class="fab fa-linkedin-in"><img src="assets/images/Icon-Linkedin.svg" alt="image" /></i>
+                        <i class="fab-fa-facebook-f"><img src="assets/images/facebook.svg" alt="image" /></i>
+                        <i class="fab-fa-twitter"><img src="assets/images/icons8-twitter (1).svg" alt="image" /></i>
+                        <i class="fab-fa-instagram"><img src="assets/images/icon-instagram.svg" alt="image" /></i>
+                        <i class="fab-fa-linkedin-in"><img src="assets/images/Icon-Linkedin.svg" alt="image" /></i>
                     </div>
                 </div>
             </div>
@@ -506,7 +286,5 @@
             <!-- Bottom copyright -->
             <div class="footer-bottom">&copy; Copyright Rimel 2022. All rights reserved</div>
         </footer>
-
-        <script src="index.js"></script>
     </body>
 </html>

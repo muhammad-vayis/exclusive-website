@@ -20,27 +20,30 @@ del {
 }
 
 @font-face {
-    font-family: "open_sansbold";
-    src: url("../fonts/opensans-bold-webfont.woff2") format("woff2"),
-        url("../fonts/opensans-bold-webfont.woff") format("woff");
-    font-weight: normal;
+    font-family: 'Poppins-Bold';
+    src: url('../assets/fonts/poppins-bold-webfont.woff2') format('woff2'),
+        url('../assets/fonts/poppins-bold-webfont.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "open_sansregular";
-    src: url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
-        url("../fonts/opensans-regular-webfont.woff") format("woff");
+    font-family: 'Poppins-Regular';
+    src: url('../assets/fonts/poppins-regular-webfont.woff') format('woff2'),
+        url('../assets/fonts/poppins-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "open_sanslight";
-    src: url("../fonts/opensans-light-webfont.woff2") format("woff2"),
-        url("../fonts/opensans-light-webfont.woff") format("woff");
-    font-weight: normal;
+    font-family: 'Poppins-Medium';
+    src: url('../assets/fonts/poppins-medium-webfont.woff2') format('woff2'),
+        url('../assets/fonts/poppins-medium-webfont.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -110,12 +113,17 @@ br.clear {
     line-height: 1.6em;
     font-size: 14px;
     color: grey;
+    font-weight: 400;
+    font-family: 'Poppins-Regular';
+    
 }
 .top-bar .space-between {
     display: flex;
     justify-content: space-between;
 }
-
+.content-center {
+    margin: 0 auto;
+}
 .language-select {
     display: flex;
     align-items: center;
@@ -158,6 +166,8 @@ nav ul li a {
     color: black;
     position: relative;
     padding-bottom: 5px;
+    font-weight: 400;
+    font-family: 'Poppins-Regular';
 }
 
 nav ul li a::after {
@@ -189,6 +199,11 @@ nav ul li a:hover::after {
     background-color: #f5f5f5;
     border-radius: 5px;
     display: flex;
+}
+.search-here {
+    font-weight: 400;
+    font-family: 'Poppins-Regular';
+    font-size: 12px;
 }
 .search-icon {
     cursor: pointer;
@@ -274,6 +289,8 @@ hr {
     font-size: 40px;
     line-height: 1.2em;
     margin-bottom: 15px;
+    font-weight: 600;
+    font-family: 'Poppins-Bold';
 }
 
 .shop-now {
@@ -308,9 +325,10 @@ hr {
 .category-label {
     font-size: 16px;
     color: #db4444;
-    font-weight: bold;
     display: flex;
     align-items: center;
+    font-weight: 600;
+    font-family: 'Poppins-Medium';
 }
 
 .category-label::before {
@@ -325,7 +343,7 @@ hr {
 
 h3 {
     font-size: 36px;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 40px;
 }
 
@@ -353,8 +371,9 @@ h3 {
 
 .category-item p {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0;
+    font-family: 'Poppins-Regular';
 }
 
 /* Hover effect on category items */
@@ -364,7 +383,7 @@ h3 {
 
 .seperate {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
     justify-content: space-between;
     margin-top: 60px;
@@ -407,7 +426,7 @@ h3 {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #00ff66; 
+    background-color: #00ff66;
     color: #fafafa;
     font-size: 12px;
     font-weight: bold;
@@ -426,7 +445,7 @@ h3 {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 1px solid #000; 
+    border: 1px solid #000;
     cursor: pointer;
 }
 
@@ -604,6 +623,7 @@ h3 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-weight: 500;
 }
 
 /* connect */
@@ -618,7 +638,7 @@ h3 {
 .icon-connect {
     width: 80px;
     height: 80px;
-    background-color: #bfbfbf; 
+    background-color: #bfbfbf;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -631,19 +651,21 @@ h3 {
 .icon-connect-inner {
     width: 60px;
     height: 60px;
-    background-color: #000; 
+    background-color: #000;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .first h4 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 5px;
 }
 .first p {
     font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins-Regular';
 }
 
 /* footer */
@@ -666,14 +688,19 @@ h3 {
 .footer-column h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    font-weight: bold;
+    font-weight: 700;
+    color: #fafafa;
+    font-family: 'Poppins-Regular';
 }
 
 /* Text in each section */
 .footer-column p {
     font-size: 14px;
     margin-bottom: 15px;
-    color: #bfbfbf;
+    font-weight: 400;
+    color: #fafafa;
+    font-family: 'Poppins-Regular';
+    line-height: 25px;
 }
 
 /* Subscription form */
@@ -690,9 +717,11 @@ h3 {
     font-size: 14px;
     border: none;
     outline: none;
-    color: #fff;
+    color: #fafafa;
     background-color: #000;
     flex: 1;
+    font-weight: 400;
+    font-family: 'Poppins-Regular';
 }
 
 /* Submit button */
@@ -707,10 +736,11 @@ h3 {
 /* Links */
 .footer-column a {
     display: block;
-    color: #bfbfbf;
+    color: #fafafa;
     text-decoration: none;
     font-size: 14px;
     margin-bottom: 10px;
+    font-family: 'Poppins-Regular';
 }
 
 /* Download app section */
@@ -740,6 +770,7 @@ h3 {
     gap: 30px;
     margin-top: 15px;
     align-items: center;
+    cursor: pointer;
 }
 
 .fab-fa-twitter {
@@ -759,6 +790,8 @@ h3 {
     text-align: center;
     padding: 10px;
     font-size: 12px;
+    font-weight: 400;
+    font-family: 'Poppins-Regular';
 }
 
 /* Purple border on top */
@@ -816,7 +849,6 @@ h3 {
     display: flex;
 }
 
-
 .close-icon {
     display: none;
 }
@@ -865,39 +897,39 @@ h3 {
     }
     .category-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); 
-        gap: 20px; 
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
     }
 
     .category-item {
-        padding: 15px; 
+        padding: 15px;
     }
 
     .category-item img {
-        width: 60px; 
+        width: 60px;
         height: auto;
     }
 
     .category-item p {
-        font-size: 14px; 
+        font-size: 14px;
     }
 
     h3 {
-        font-size: 28px; 
+        font-size: 28px;
         margin-bottom: 20px;
     }
 
     .category-header {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: flex-start;
     }
 
     .category-label {
-        font-size: 14px; 
+        font-size: 14px;
     }
 
     .category-label::before {
-        width: 10px; 
+        width: 10px;
         height: 20px;
         margin-right: 5px;
     }
